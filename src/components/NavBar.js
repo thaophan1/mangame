@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import './NavBar.css'
 
 class NavBar extends Component {
@@ -9,10 +10,11 @@ class NavBar extends Component {
             <div className = "nav-bar">
                 <h2 className="logo">MANGIME</h2>
                 <ul className = "nav-links">
-                    <li><a href = "#">Top Anime</a></li>
-                    <li><a href = "#">Top Manga</a></li>
-                    <li><a href = "#">Anime Recommendations</a></li>
-                    <li><a href = "#">Manga Recommendations</a></li>
+                    <li><NavLink to = "/">Home</NavLink></li>
+                    <li><NavLink to = "/anime">Top Anime</NavLink></li>
+                    <li><NavLink to = "/manga">Top Manga</NavLink></li>
+                    <li><NavLink to = "/anime-rec">Anime Recommendations</NavLink></li>
+                    <li><NavLink to = "/manga-rec">Manga Recommendations</NavLink></li>
                 </ul>
             </div>
         );
