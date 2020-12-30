@@ -22,10 +22,25 @@ class NavBar extends Component {
 
     render() { 
         return ( 
-            <div className = "nav-bar">
-                <h2 className="logo">MANGIME</h2>
-                <nav className = {this.state.menu ? "nav-bar-mobile" : "nav-bar-desktop"}> 
-                    <ul className = "nav-links">
+            <>
+                <div className = "nav-bar">
+                    <h2 className="logo">MANGIME</h2>
+                    <nav className = "nav-bar-desktop"> 
+                        <ul className = "nav-links">
+                            <li><NavLink to = "/">Home</NavLink></li>
+                            <li><NavLink to = "/anime">Top Anime</NavLink></li>
+                            <li><NavLink to = "/manga">Top Manga</NavLink></li>
+                            <li><NavLink to = "/anime-rec">Anime Recommendations</NavLink></li>
+                            <li><NavLink to = "/manga-rec">Manga Recommendations</NavLink></li>
+                        </ul>
+                    </nav>
+                    <Link className = "hamburger">
+                        <AiOutlineMenu onClick = {this.showMenu}/>
+                    </Link>
+                </div>
+
+                <nav className = {this.state.menu ? "nav-bar-mobile active" : "nav-bar-mobile"}>
+                    <ul className = "nav-links-mobile" onClick = {this.showMenu}>
                         <li><NavLink to = "/">Home</NavLink></li>
                         <li><NavLink to = "/anime">Top Anime</NavLink></li>
                         <li><NavLink to = "/manga">Top Manga</NavLink></li>
@@ -33,10 +48,7 @@ class NavBar extends Component {
                         <li><NavLink to = "/manga-rec">Manga Recommendations</NavLink></li>
                     </ul>
                 </nav>
-                <Link className = "hamburger">
-                    <AiOutlineMenu onClick = {this.showMenu}/>
-                </Link>
-            </div>
+            </>
         );
     }
 }
