@@ -3,9 +3,25 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
   font-family: "Audiowide", cursive;
+  justify-content: space-around;
   min-height: 100px;
+  max-height: 10vh;
+}
+
+.nav-bar-desktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 70%;
+}
+
+.nav-bar-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .logo {
@@ -18,14 +34,48 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0;
-  width: 50%;
 }
 
 .nav-links li {
   list-style: none;
+  margin-left: 30px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: whitesmoke;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background-color: rgb(158, 28, 28);
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .logo {
+    margin-left: 30px;
+  }
+
+  .hamburger {
+    display: inline;
+    float: left;
+    color: rgb(24, 22, 22);
+    font-size: 40px;
+    padding-bottom: 10px;
+    margin-right: 30px;
+  }
+
+  .hamburger:hover {
+    color: rgb(24, 22, 22);
+  }
+
+  .nav-links {
+    display: none;
+  }
 }
