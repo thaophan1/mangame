@@ -21,6 +21,17 @@ class NavBar extends Component {
     }
 
     render() { 
+        let menuBar = 
+        <nav className = "nav-bar-mobile">
+            <ul className = "nav-links-mobile" onClick = {this.showMenu}>
+                <li><NavLink to = "/">Home</NavLink></li>
+                <li><NavLink to = "/anime">Top Anime</NavLink></li>
+                <li><NavLink to = "/manga">Top Manga</NavLink></li>
+                <li><NavLink to = "/anime-rec">Anime Recommendations</NavLink></li>
+                <li><NavLink to = "/manga-rec">Manga Recommendations</NavLink></li>
+            </ul>
+        </nav>
+
         return ( 
             <>
                 <div className = "nav-bar">
@@ -39,15 +50,7 @@ class NavBar extends Component {
                     </Link>
                 </div>
 
-                <nav className = {this.state.menu ? "nav-bar-mobile active" : "nav-bar-mobile"}>
-                    <ul className = "nav-links-mobile" onClick = {this.showMenu}>
-                        <li><NavLink to = "/">Home</NavLink></li>
-                        <li><NavLink to = "/anime">Top Anime</NavLink></li>
-                        <li><NavLink to = "/manga">Top Manga</NavLink></li>
-                        <li><NavLink to = "/anime-rec">Anime Recommendations</NavLink></li>
-                        <li><NavLink to = "/manga-rec">Manga Recommendations</NavLink></li>
-                    </ul>
-                </nav>
+                {this.state.menu ? menuBar : null}
             </>
         );
     }

@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <NavBar />
-      
+
       <Switch>  
         <Route path = "/" exact render = {
           () => {
