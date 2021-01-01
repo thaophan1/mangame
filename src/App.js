@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import NavBar from './components/NavBar'
 import Home from './components/Home'
+import TopAnime from './components/TopAnime';
 import './App.css'
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
 
         <Route path = "/anime" exact render = {
           () => {
-            return (<h1>Anime</h1>);
+            return (<TopAnime />);
           }
         }/>
 
