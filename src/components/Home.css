@@ -1,0 +1,49 @@
+.home {
+  background-color: rgba(236, 232, 230, 0.74);
+}
+
+.about-me {
+  display: inline-block;
+  margin: 15px 0px 15px 0px;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.intro-p {
+  font-family: "Inconsolata", monospace;
+  font-size: 30px;
+  color: black;
+}
+
+.hobbies li {
+  list-style: none;
+}
+
+.thanks-message {
+  font-weight: bold;
+}
+
+.recommendations {
+  padding: 10px 30px 30px 0px;
+  text-decoration: underline;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.top-ten {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.top-ten::-webkit-scrollbar {
+  display: none;
+}
+
+.top-ten .anime {
+  margin-right: 5px;
+  border: 1px solid black;
+  max-width: 33vh;
+}

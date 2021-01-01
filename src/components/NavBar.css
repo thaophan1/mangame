@@ -10,6 +10,7 @@ body {
 
 .nav-bar {
   background-color: rgba(189, 22, 22, 0.945);
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28,13 +29,11 @@ body {
 
 .nav-bar-mobile {
   background-color: rgba(189, 22, 22, 0.945);
-  height: 100vh;
+  height: 30vh;
   display: none;
-  float: right;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  margin-left: auto;
+  justify-content: space-around;
   transition-duration: 250ms;
   transition-timing-function: ease-out;
 }
@@ -57,7 +56,7 @@ body {
   align-items: center;
   justify-content: space-around;
   height: 80%;
-  margin-top: 10%;
+  padding: 0;
 }
 
 .nav-links a,
@@ -100,7 +99,7 @@ body {
 
   .nav-bar-mobile {
     display: inline-flex;
-    width: 30%;
+    width: 100%;
   }
 
   .hamburger {
@@ -124,7 +123,7 @@ body {
 @media screen and (max-width: 984px) {
   .nav-bar-mobile {
     display: inline-flex;
-    width: 50%;
+    width: 100%;
   }
 }
 

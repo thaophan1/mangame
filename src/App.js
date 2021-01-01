@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import NavBar from './components/NavBar'
+import Home from './components/Home'
 import './App.css'
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <Switch>  
         <Route path = "/" exact render = {
           () => {
-            return (<h1>Home</h1>);
+            return (<Home />);
           }
         }/>
 

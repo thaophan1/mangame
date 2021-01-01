@@ -23,7 +23,7 @@ class NavBar extends Component {
     render() { 
         let menuBar = 
         <nav className = "nav-bar-mobile">
-            <ul className = "nav-links-mobile" onClick = {this.showMenu}>
+            <ul className = "nav-links-mobile">
                 <li><NavLink to = "/">Home</NavLink></li>
                 <li><NavLink to = "/anime">Top Anime</NavLink></li>
                 <li><NavLink to = "/manga">Top Manga</NavLink></li>
