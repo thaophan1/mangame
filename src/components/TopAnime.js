@@ -9,6 +9,12 @@ class TopAnime extends Component {
             topAnime: [],
             isLoaded: false
         }
+
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick() {
+        console.log("clicked")
     }
 
     componentDidMount() {
@@ -20,7 +26,7 @@ class TopAnime extends Component {
                     isLoaded: true
                 })
 
-                // console.log(this.state.topAnime)
+                console.log(this.state.topAnime)
             });
     }
 
@@ -33,13 +39,20 @@ class TopAnime extends Component {
         }
 
         return ( 
-            <div>
-                top anime:
-                <ul>
-                    {topAnime.map(anime => 
-                        <li key = {anime.mal_id}>{anime.title}</li>
-                    )}
-                </ul>
+            <div className = "container-fluid">
+                <h1 className = "row heading">Top Anime</h1>    
+
+                <div>
+                    <ul className = "row top-anime-list">
+                        {topAnime.map(anime => 
+                            <li key = {anime.mal_id} className = "col-6 col-md-4 col-lg-3 col-xl-2">
+                                <a href = "#" onClick = {this.handleClick}>
+                                    <img className = "top-anime" src = {anime.image_url} alt = {anime.title} />
+                                </a>
+                            </li>
+                        )}
+                    </ul>
+                </div>
             </div>
         );
     }

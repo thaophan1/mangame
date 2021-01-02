@@ -45,5 +45,6 @@
 .top-ten .anime {
   margin-right: 5px;
   border: 1px solid black;
-  max-width: 33vh;
+  height: 300px;
+  width: 20vh;
 }
