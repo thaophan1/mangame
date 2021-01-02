@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import NavBar from './components/NavBar'
 import Home from './components/Home'
-import TopAnime from './components/TopAnime';
+import TopAnime from './components/TopAnime/TopAnime';
 import './App.css'
 
 function App() {

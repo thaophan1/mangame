@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TopAnimeCard from './TopAnimeCard';
 import './TopAnime.css'
 
 class TopAnime extends Component {
@@ -7,14 +8,37 @@ class TopAnime extends Component {
 
         this.state = {
             topAnime: [],
-            isLoaded: false
+            isLoaded: false,
+            anime: {
+                end_date: "",
+                episodes: 0,
+                image_url: "",
+                mal_id: 0,
+                rank: 0,
+                score: 0.0,
+                start_date: "",
+                title: ""
+            },
+            cardClicked: false
         }
 
         this.handleClick = this.handleClick.bind(this)
+        this.toggle = this.toggle.bind(this)
     }
 
-    handleClick() {
-        console.log("clicked")
+    handleClick(anime) {
+        this.setState({
+            anime: anime,
+            cardClicked: true
+        })
+
+        console.log(anime)
+    }
+
+    toggle() {
+        this.setState({
+            cardClicked: false
+        })
     }
 
     componentDidMount() {
@@ -42,11 +66,14 @@ class TopAnime extends Component {
             <div className = "container-fluid">
                 <h1 className = "row heading">Top Anime</h1>    
 
-                <div>
+                <div className = "top-anime-div">
+                    {this.state.cardClicked ? <TopAnimeCard 
+                                                anime = {this.state.anime}
+                                                toggle = {this.toggle}/> : null}
                     <ul className = "row top-anime-list">
-                        {topAnime.map(anime => 
+                        {topAnime.map((anime) => 
                             <li key = {anime.mal_id} className = "col-6 col-md-4 col-lg-3 col-xl-2">
-                                <a href = "#" onClick = {this.handleClick}>
+                                <a href = "#" onClick = {() => this.handleClick(anime)}>
                                     <img className = "top-anime" src = {anime.image_url} alt = {anime.title} />
                                 </a>
                             </li>
