@@ -1,29 +1,122 @@
 .top-anime-card {
   top: calc(10vh + 5px);
-  bottom: 5vh;
-  left: 10vh;
-  right: 10vh;
+  bottom: 10vh;
+  left: 30vh;
+  right: 30vh;
   position: fixed;
   z-index: 1;
-  background-color: yellow;
+  background-color: rgba(184, 182, 182, 0.973);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 10px 10px 30px gray;
 }
 
-.title {
+.top-anime-card::-webkit-scrollbar {
+  display: none;
+}
+
+.loading {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 50px;
+  position: absolute;
+  margin: auto;
+}
+
+.header {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   font-family: "Inconsolata", monospace;
 }
 
 .title {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 40px;
   display: inline;
+  color: black;
 }
 
 .exit {
+  color: black;
   position: absolute;
   font-family: "Inconsolata", monospace;
   top: 10px;
   right: 10px;
   font-size: 30px;
+}
+
+.exit:hover {
+  color: whitesmoke;
+}
+
+.cover {
+  display: inline;
+  position: relative;
+  top: 5px;
+  left: 10px;
+  padding: 0;
+}
+
+.stats {
+  color: black;
+  margin-top: 5px;
+  font-family: "Inconsolata", monospace;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.anime-description {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow-wrap: break-word;
+  font-family: "Inconsolata", monospace;
+}
+
+@media screen and (max-width: 1480px) {
+  .top-anime-card {
+    left: 20vh;
+    right: 20vh;
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .top-anime-card {
+    left: 15vh;
+    right: 15vh;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .top-anime-card {
+    left: 10vh;
+    right: 10vh;
+  }
+
+  .stats {
+    font-size: 30px;
+  }
+
+  .anime-description {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .stats {
+    font-size: 25px;
+  }
+
+  .anime-description {
+    font-size: 14px;
+  }
 }

@@ -12,6 +12,7 @@
 .top-anime-list {
   display: flex;
   flex-direction: row;
+  align-content: space-around;
   flex-wrap: wrap;
   list-style: none;
 }
@@ -19,6 +20,29 @@
 .top-anime {
   height: 300px;
   width: 20vh;
-  margin-bottom: 2px;
+  margin-bottom: 15px;
   border: 1px solid black;
+}
+
+.top-anime:hover {
+  border-color: rgb(158, 28, 28);
+  box-shadow: 5px 5px 30px rgb(158, 28, 28);
+}
+
+@media screen and (max-width: 1600px) {
+  .top-anime-list {
+    padding-left: 25px;
+  }
+}
+
+@media screen and (max-width: 1480px) {
+  .top-anime-list {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .top-anime-list {
+    padding: 0;
+  }
 }

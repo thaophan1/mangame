@@ -59,7 +59,7 @@ class TopAnime extends Component {
         const topAnime = this.state.topAnime;
 
         if (!isLoaded) {
-            return <div>Loading...</div>
+            return <h1 className = "loading">Loading...</h1>
         }
 
         return ( 
@@ -70,7 +70,7 @@ class TopAnime extends Component {
                     {this.state.cardClicked ? <TopAnimeCard 
                                                 anime = {this.state.anime}
                                                 toggle = {this.toggle}/> : null}
-                    <ul className = "row top-anime-list">
+                    <ul className = "top-anime-list">
                         {topAnime.map((anime) => 
                             <li key = {anime.mal_id} className = "col-6 col-md-4 col-lg-3 col-xl-2">
                                 <a href = "#" onClick = {() => this.handleClick(anime)}>
