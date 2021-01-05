@@ -4,6 +4,7 @@ import Route from 'react-router-dom/Route';
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import TopAnime from './components/TopAnime/TopAnime';
+import TopManga from './components/TopManga/TopManga';
 import './App.css'
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
 
         <Route path = "/manga" exact render = {
           () => {
-            return (<h1>Manga</h1>);
+            return (<TopManga />)
           }
         }/>
 

@@ -1,4 +1,5 @@
-.top-anime-div {
+.top-anime-div,
+.top-manga-div {
   position: relative;
 }
 
@@ -9,7 +10,8 @@
   font-weight: bold;
 }
 
-.top-anime-list {
+.top-anime-list,
+.top-manga-list {
   display: flex;
   flex-direction: row;
   align-content: space-around;
@@ -17,32 +19,37 @@
   list-style: none;
 }
 
-.top-anime {
+.top-anime,
+.top-manga {
   height: 300px;
   width: 20vh;
   margin-bottom: 15px;
   border: 1px solid black;
 }
 
-.top-anime:hover {
+.top-anime:hover,
+.top-manga:hover {
   border-color: rgb(158, 28, 28);
   box-shadow: 5px 5px 30px rgb(158, 28, 28);
 }
 
 @media screen and (max-width: 1600px) {
-  .top-anime-list {
+  .top-anime-list,
+  .top-manga-list {
     padding-left: 25px;
   }
 }
 
 @media screen and (max-width: 1480px) {
-  .top-anime-list {
+  .top-anime-list,
+  .top-manga-list {
     padding-left: 20px;
   }
 }
 
 @media screen and (max-width: 540px) {
-  .top-anime-list {
+  .top-anime-list,
+  .top-manga-list {
     padding: 0;
   }
 }

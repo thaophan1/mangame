@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TopAnimeCard from './TopAnimeCard';
-import './TopAnime.css'
+import '../TopAnime.css'
 
 class TopAnime extends Component {
     constructor(props) {
@@ -69,7 +69,8 @@ class TopAnime extends Component {
                 <div className = "top-anime-div">
                     {this.state.cardClicked ? <TopAnimeCard 
                                                 anime = {this.state.anime}
-                                                toggle = {this.toggle}/> : null}
+                                                toggle = {this.toggle}
+                                                type = "anime"/> : null}
                     <ul className = "top-anime-list">
                         {topAnime.map((anime) => 
                             <li key = {anime.mal_id} className = "col-6 col-md-4 col-lg-3 col-xl-2">
