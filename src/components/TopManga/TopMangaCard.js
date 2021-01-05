@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import Review from './MangaReview';
+import Review from '../Review';
 import '../Card.css'
 
 class TopMangaCard extends Component {
@@ -89,7 +89,8 @@ class TopMangaCard extends Component {
                 <h1 className = "title">Reviews <br/></h1>
                 <div className = "reviews-list">
                     {this.state.reviews.map(currReview => 
-                        <Review review = {currReview}/>
+                        <Review review = {currReview}
+                                type = "manga"/>
                     )}
                 </div>
             </div>

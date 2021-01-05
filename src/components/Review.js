@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../Review.css'
+import './Review.css'
 
 class MangaReview extends Component {
     constructor(props) {
@@ -30,7 +30,7 @@ class MangaReview extends Component {
                     <a className = "col-12 reviewer-username no-padding" href = {reviewer.url} target = "_blank">{reviewer.username}</a>
                     <h2 className = "col-2 review-score no-padding">Overall <br/> {reviewer.scores.overall}</h2>
                     <h2 className = "col-2 review-score no-padding">Story <br/> {reviewer.scores.story}</h2>
-                    <h2 className = "col-1 review-score no-padding">Art <br/> {reviewer.scores.art}</h2>
+                    <h2 className = "col-1 review-score no-padding">Art <br/>{this.props.type == "anime" ? reviewer.scores.animation : reviewer.scores.art}</h2>
                     <h2 className = "col-3 review-score no-padding">Character <br/> {reviewer.scores.character}</h2>
                     <h2 className = "col-3 review-score no-padding">Enjoyment <br/> {reviewer.scores.enjoyment}</h2>
                 </div>

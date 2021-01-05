@@ -43,7 +43,7 @@ class TopManga extends Component {
     }
 
     componentDidMount() {
-        fetch('https://cors-anywhere.herokuapp.com/https://api.jikan.moe/v3/top/manga/')
+        fetch('https://infinite-coast-32217.herokuapp.com/https://api.jikan.moe/v3/top/manga/')
             .then(result => result.json())
             .then((json) => {
                 this.setState({

@@ -42,7 +42,7 @@ class TopAnime extends Component {
     }
 
     componentDidMount() {
-        fetch('https://cors-anywhere.herokuapp.com/https://api.jikan.moe/v3/top/anime/')
+        fetch('https://infinite-coast-32217.herokuapp.com/https://api.jikan.moe/v3/top/anime/')
             .then(result => result.json())
             .then((json) => {
                 this.setState({

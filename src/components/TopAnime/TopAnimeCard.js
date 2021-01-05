@@ -1,6 +1,7 @@
-  import React, { Component } from 'react';
+import React, { Component } from 'react';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import Review from '../Review';
 import '../Card.css'
 
 class TopAnimeCard extends Component {
@@ -13,7 +14,8 @@ class TopAnimeCard extends Component {
                 status: "",
                 synopsis: "",
                 premiered: ""
-            }
+            },
+            reviews: []
         }
 
         this.exitClicked = this.exitClicked.bind(this)
@@ -24,9 +26,9 @@ class TopAnimeCard extends Component {
     }
 
     componentDidMount() {
-        const url = encodeURI(`https://api.jikan.moe/v3/anime/${this.props.anime.mal_id}`)
-        console.log(url)
-        fetch(url)
+        const animeURL = encodeURI(`https://api.jikan.moe/v3/anime/${this.props.anime.mal_id}`)
+        console.log(animeURL)
+        fetch(animeURL)
         .then(result => result.json())
         .then(json => {
             this.setState({
@@ -39,6 +41,18 @@ class TopAnimeCard extends Component {
             })
 
             console.log(json)
+        })
+
+        const reviewsURL = animeURL + "/reviews"
+        console.log(reviewsURL)
+        fetch(reviewsURL)
+        .then(result => result.json())
+        .then(json => {
+            this.setState({
+                reviews: json.reviews
+            })
+
+            console.log(this.state.reviews)
         })
     }
 
@@ -76,6 +90,13 @@ class TopAnimeCard extends Component {
                 <p className = "anime-description">
                     {this.state.currAnime.synopsis}
                 </p>
+                <h2 className = "title">Reviews</h2>
+                <div className = "reviews-list">
+                    {this.state.reviews.map(currReview =>
+                        <Review review = {currReview}
+                                type = "anime"/>
+                    )}
+                </div>
             </div>
         );
     }
