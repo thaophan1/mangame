@@ -1,0 +1,65 @@
+.review-compact {
+  width: 100%;
+  height: 20%;
+  left: 15px !important;
+  position: relative;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  height: 350px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.review-expand {
+  width: 100%;
+  height: 20%;
+  left: 15px !important;
+  position: relative;
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+
+.review-compact:hover,
+.review-expand:hover {
+  background-color: rgba(207, 206, 199, 0.877);
+  cursor: pointer;
+}
+
+.pfp {
+  display: inline;
+  width: 90px;
+  height: 150px;
+  left: 10px;
+}
+
+.reviewer-username {
+  display: inline-block;
+  justify-content: center;
+  width: 83.3%;
+  height: 20px;
+  font-size: 25px;
+  font-family: "Inconsolata", monospace;
+}
+
+.review-score {
+  display: inline-flex;
+  width: 16.6%;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid black;
+  top: 20px;
+  font-family: "Inconsolata", monospace;
+}
+
+.review-content {
+  display: block;
+  font-family: "Inconsolata", monospace;
+  font-size: 15px;
+  margin-right: 10px;
+  width: 90% !important;
+  left: 10px;
+}
+
+.no-padding {
+  padding: 0 !important;
+}

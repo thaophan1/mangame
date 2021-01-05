@@ -70,7 +70,8 @@ class TopManga extends Component {
                 <div className = "top-manga-div">
                     {this.state.cardClicked ? <TopMangaCard 
                                                 manga = {this.state.manga}
-                                                toggle = {this.toggle}/> : null}
+                                                toggle = {this.toggle}
+                                                /> : null}
                     <ul className = "top-manga-list">
                         {topManga.map((manga) => 
                             <li key = {manga.mal_id} className = "col-6 col-md-4 col-lg-3 col-xl-2">
