@@ -64,7 +64,7 @@ class TopMangaCard extends Component {
                         <hr />
                         Score: {this.props.manga.score}
                         <hr />
-                        Volumes: {this.props.manga.volumes != {}? this.props.manga.volumes : "unknown"}
+                        Volumes: {this.props.manga.volumes != null? this.props.manga.volumes : "Unknown"}
                         <hr />
                         Status: {this.state.currManga.status}
                     </h2>
