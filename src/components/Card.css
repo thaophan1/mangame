@@ -16,6 +16,13 @@
   display: none;
 }
 
+.cover-and-stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .loading {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 50px;
@@ -54,11 +61,12 @@
 }
 
 .cover {
-  display: inline;
   position: relative;
-  top: 5px;
-  left: 10px;
-  padding: 0;
+  /* top: 5px !important;
+  left: 10px !important; */
+  height: auto;
+  width: auto;
+  border: 1px solid black;
 }
 
 .stats {

@@ -73,9 +73,9 @@ class TopAnimeCard extends Component {
                         <AiOutlineCloseCircle className = "exit" onClick = {this.exitClicked}/>
                     </Link>
                 </div>
-                <div className = "justify-content-sm-center row">
-                    <img src = {this.props.anime.image_url} className = "cover col-11 col-sm-9 col-md-4 col-xl-3"/>
-                    <h2 className = "stats col-12 col-sm-9 col-md-8 col-xl-9">
+                <div className = "cover-and-stats">
+                    <img src = {this.props.anime.image_url} className = "cover"/>
+                    <h2 className = "stats">
                         Ranked: #{this.props.anime.rank}
                         <hr />
                         Score: {this.props.anime.score}
