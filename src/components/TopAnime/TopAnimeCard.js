@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import Review from '../Review';
+import Review from '../Review/Review';
 import '../Card.css'
 
 class TopAnimeCard extends Component {

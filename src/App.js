@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
-import NavBar from './components/NavBar'
-import Home from './components/Home'
+import NavBar from './components/NavBar/NavBar'
+import Home from './components/Home/Home'
 import TopAnime from './components/TopAnime/TopAnime';
 import TopManga from './components/TopManga/TopManga';
+import Footer from './components/Footer/Footer'
 import './App.css'
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
           }
         }/>
       </Switch>
+
+      <Footer />
+
     </Router>
   );
 }
