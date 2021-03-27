@@ -24,7 +24,7 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  width: 70%;
+  width: 50%;
 }
 
 .nav-bar-mobile {

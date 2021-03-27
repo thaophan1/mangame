@@ -27,8 +27,9 @@ class NavBar extends Component {
                 <li><NavLink to = "/">Home</NavLink></li>
                 <li><NavLink to = "/anime">Top Anime</NavLink></li>
                 <li><NavLink to = "/manga">Top Manga</NavLink></li>
-                <li><NavLink to = "/anime-rec">Anime Recommendations</NavLink></li>
-                <li><NavLink to = "/manga-rec">Manga Recommendations</NavLink></li>
+                <li><NavLink to = "/by-genre">By Genre</NavLink></li>
+                {/* <li><NavLink to = "/anime-rec">Anime Recommendations</NavLink></li>
+                <li><NavLink to = "/manga-rec">Manga Recommendations</NavLink></li> */}
             </ul>
         </nav>
 
@@ -41,8 +42,9 @@ class NavBar extends Component {
                             <li><NavLink to = "/">Home</NavLink></li>
                             <li><NavLink to = "/anime">Top Anime</NavLink></li>
                             <li><NavLink to = "/manga">Top Manga</NavLink></li>
-                            <li><NavLink to = "/anime-rec">Anime Recommendations</NavLink></li>
-                            <li><NavLink to = "/manga-rec">Manga Recommendations</NavLink></li>
+                            <li><NavLink to = "/by-genre">By Genre</NavLink></li>
+                            {/* <li><NavLink to = "/anime-rec">Anime Recommendations</NavLink></li>
+                            <li><NavLink to = "/manga-rec">Manga Recommendations</NavLink></li> */}
                         </ul>
                     </nav>
                     <Link className = "hamburger">
