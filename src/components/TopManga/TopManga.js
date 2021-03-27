@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TopMangaCard from './TopMangaCard';
-import'../TopAnime.css';
+import '../TopAnime.css';
+import '../Card.css'
 
 
 class TopManga extends Component {
@@ -96,7 +97,9 @@ class TopManga extends Component {
         const topOneShots = this.state.topOneShots;
 
         if (!isLoaded) {
-            return <h1 className = "loading">Loading...</h1>
+            return <div className = "loader-wrapper">
+                <div className = "loading">Loading...</div>
+            </div> 
         }
 
         return ( 

@@ -26,8 +26,15 @@
 .loading {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 50px;
-  position: absolute;
-  margin: auto;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(12, 11, 11);
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {

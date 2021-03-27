@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TopAnimeCard from './TopAnimeCard';
 import '../TopAnime.css'
+import '../Card.css'
 
 class TopAnime extends Component {
     constructor(props) {
@@ -95,7 +96,9 @@ class TopAnime extends Component {
         const topAnimeMovies = this.state.topAnimeMovies;
 
         if (!isLoaded) {
-            return <h1 className = "loading">Loading...</h1>
+            return <div className = "loader-wrapper">
+                <div className = "loading">Loading...</div>
+            </div> 
         }
 
         return ( 

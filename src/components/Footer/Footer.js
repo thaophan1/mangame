@@ -6,7 +6,7 @@ class Footer extends Component {
     render() { 
         return ( 
             <div className = "footer">
-                <div className = "title">Connect Socially With Me</div>
+                <div className = "title">Connect With Me</div>
                 <ul className = "icons">
                     <li>
                         <a href = "https://www.linkedin.com/in/thao-phan-b20901172/" target = "blank">
@@ -32,20 +32,8 @@ class Footer extends Component {
                         </a>
                     </li>
                 </ul>
-                <ul className = "names">
-                    <li className = "name"> 
-                        Connect on LinkedIn
-                    </li>
-                    <li className = "name"> 
-                        Other Projects
-                    </li>
-                    <li className = "name"> 
-                        Follow on Instagram
-                    </li>
-                    <li className = "name"> 
-                        Follow this Playlist
-                    </li>
-                </ul>
+                <div className = "credit">Designed by Thao Phan</div>
+                <div className = "credit" style = {{fontSize: 14}}>Contact me at <em>thaophan000@gmail.com</em></div>
             </div>
         );
     }

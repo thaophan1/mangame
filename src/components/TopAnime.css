@@ -45,6 +45,11 @@
   box-shadow: 5px 5px 30px rgb(158, 28, 28);
 }
 
+.loader-wrapper {
+  height: calc(100vh - 100px);
+  width: 100vw;
+}
+
 @media screen and (max-width: 1600px) {
   .top-anime-list,
   .top-manga-list {

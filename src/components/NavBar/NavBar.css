@@ -4,6 +4,7 @@ body {
 
 .logo {
   color: rgb(24, 22, 22);
+  font-family: "Audiowide", cursive;
   font-size: 40px;
 }
 
@@ -13,7 +14,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-family: "Audiowide", cursive;
+  font-family: "Fraunces", serif;
   justify-content: space-around;
   min-height: 100px;
 }
@@ -35,6 +36,7 @@ body {
   justify-content: space-around;
   transition-duration: 250ms;
   transition-timing-function: ease-out;
+  font-family: "Fraunces", serif;
 }
 
 .nav-links {
