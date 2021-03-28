@@ -6,6 +6,7 @@ import Home from './components/Home/Home'
 import TopAnime from './components/TopAnime/TopAnime';
 import TopManga from './components/TopManga/TopManga';
 import Footer from './components/Footer/Footer'
+import ByGenre from './components/ByGenre/ByGenre';
 import './App.css'
 
 function App() {
@@ -41,6 +42,12 @@ function App() {
         <Route path = "/manga-rec" exact render = {
           () => {
             return (<h1>Manga Recommendations</h1>);
+          }
+        }/>
+
+        <Route path = "/by-genre" exact render = {
+          () => {
+            return (<ByGenre />);
           }
         }/>
       </Switch>
