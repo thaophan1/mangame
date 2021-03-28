@@ -47,3 +47,12 @@
   font-size: 30px;
   font-family: "Fraunces", serif;
 }
+
+.back-arrow {
+  font-size: 50px;
+}
+
+.back-arrow:hover {
+  color: gray;
+  cursor: pointer;
+}
