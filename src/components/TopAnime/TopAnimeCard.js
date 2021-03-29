@@ -13,7 +13,8 @@ class TopAnimeCard extends Component {
             currAnime: {
                 status: "",
                 synopsis: "",
-                premiered: ""
+                premiered: "",
+                rank: null
             },
             reviews: []
         }
@@ -36,7 +37,8 @@ class TopAnimeCard extends Component {
                 currAnime: {
                     status: json.status,
                     synopsis: json.synopsis,
-                    premiered: json.premiered
+                    premiered: json.premiered,
+                    rank: json.rank
                 }
             })
 
@@ -76,7 +78,7 @@ class TopAnimeCard extends Component {
                 <div className = "cover-and-stats">
                     <img src = {this.props.anime.image_url} className = "cover"/>
                     <h2 className = "stats">
-                        Ranked: #{this.props.anime.rank}
+                        Ranked: #{this.state.currAnime.rank}
                         <hr />
                         Score: {this.props.anime.score}
                         <hr />
