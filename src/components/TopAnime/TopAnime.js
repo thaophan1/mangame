@@ -103,7 +103,7 @@ class TopAnime extends Component {
 
         return ( 
             <div>
-                <h1 className = "heading">Top Ranking Anime</h1>    
+                <h1 className = "list-heading">Top Ranking Anime</h1>    
                 {this.state.cardClicked ? <TopAnimeCard 
                                             anime = {this.state.anime}
                                             toggle = {this.toggle}
@@ -118,7 +118,7 @@ class TopAnime extends Component {
                     )}
                 </ul>
 
-                <h1 className = "heading">Upcoming Anime</h1>
+                <h1 className = "list-heading">Upcoming Anime</h1>
                 <ul className = "top-anime-list">
                     {topAnimeUpcoming.map((anime) => 
                         <li key = {anime.mal_id} className = "anime">
@@ -129,7 +129,7 @@ class TopAnime extends Component {
                     )}
                 </ul>
 
-                <h1 className = "heading">Airing Anime</h1>
+                <h1 className = "list-heading">Airing Anime</h1>
                 <ul className = "top-anime-list">
                     {topAnimeAiring.map((anime) => 
                         <li key = {anime.mal_id} className = "anime">
@@ -140,7 +140,7 @@ class TopAnime extends Component {
                     )}
                 </ul>
 
-                <h1 className = "heading">Top Anime Movies</h1>
+                <h1 className = "list-heading">Top Anime Movies</h1>
                 <ul className = "top-anime-list">
                     {topAnimeMovies.map((anime) => 
                         <li key = {anime.mal_id} className = "anime">

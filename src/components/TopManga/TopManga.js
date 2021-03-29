@@ -103,7 +103,7 @@ class TopManga extends Component {
         }
 
         return ( 
-            <div className = "container-fluid">
+            <div className>
 
                 <div className = "top-manga-div">
                     {this.state.cardClicked ? <TopMangaCard 
@@ -111,7 +111,7 @@ class TopManga extends Component {
                                                 toggle = {this.toggle}
                                                 /> : null}
                     
-                    <h1 className = "heading">Top Manga</h1>    
+                    <h1 className = "list-heading">Top Manga</h1>    
                     <ul className = "top-manga-list">
                         {topManga.map((manga) => 
                             <li key = {manga.mal_id} className = "manga">
@@ -122,7 +122,7 @@ class TopManga extends Component {
                         )}
                     </ul>
 
-                    <h1 className = "heading">Top Novels</h1>    
+                    <h1 className = "list-heading">Top Novels</h1>    
                     <ul className = "top-manga-list">
                         {topNovels.map((novel) => 
                             <li key = {novel.mal_id} className = "manga">
@@ -133,7 +133,7 @@ class TopManga extends Component {
                         )}
                     </ul>
 
-                    <h1 className = "heading">Top Manhwa</h1>    
+                    <h1 className = "list-heading">Top Manhwa</h1>    
                     <ul className = "top-manga-list">
                         {topManhwa.map((manhwa) => 
                             <li key = {manhwa.mal_id} className = "manga">
@@ -144,7 +144,7 @@ class TopManga extends Component {
                         )}
                     </ul>
 
-                    <h1 className = "heading">Top Oneshots</h1>    
+                    <h1 className = "list-heading">Top Oneshots</h1>    
                     <ul className = "top-manga-list">
                         {topOneShots.map((oneShot) => 
                             <li key = {oneShot.mal_id} className = "manga">
